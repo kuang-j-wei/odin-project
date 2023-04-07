@@ -1,0 +1,22 @@
+.container {
+  border: 5px solid #ffcc5c;
+  display: flex;
+}
+
+.home {
+  /*
+  flex-shrink: 1;
+  */
+  flex-grow: 1;
+  flex-shrink: 100;
+  flex-basis: 1000px;
+}
+
+.logout {
+    /*
+  flex-shrink: 1;
+  */
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 1000px;
+}
