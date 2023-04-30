@@ -20,8 +20,22 @@ A flex item itself can be made into a flex container as well.
 # Growing and Shrinking
 `flex: 1` property means:
 * `flex-grow`: `1`. Single number. Growth factor, relative to other flex items.
-* `flex-shrink`: `1`. Single number. Shrink factor relative to other flex items. `flex-shrink: 0` would make an item to not shrink.
+  * By default, each element will shrink down to their minimum comfortable sizing
+  * Without specifying `flex: 1`, the default is `0`
+  * If more than one item is non-zero, then we will divide up the available space relative to the growth factor weighting
+  * It determines how _extra space is distributed_
+* `flex-shrink`: `1`. Single number. Shrink factor relative to other flex items.
+  * The default is also `1` without specifying `flex: 1`
+  * `flex-shrink: 0` would make an item to not shrink.
+  * The ratio between child items are what matter, not the absolute numbers
+  * Given a certain amount of pixel deficit, the item with the larger `flex-shrink` will pay a higher portion of the deficit
+  * It determines how _extra space is removed_
 * `flex-basis`:`0%`. Single number. It sets the initial size of a flex item.
+  * It sets the hypothetical size of the primary axis
+  * It also sets the minimum size, since item can't be below this threshold
+* Note that often many types of content has a predefined minimum width
+  * For example for texts it's 170px-200px
+  * We can set the `min-width: 0px` so that the child content can `flex-shrink` according to the parent container 
 
 ## Common Shorthands
 * `flex: initial` = `flex: 0 1 auto`
@@ -105,11 +119,19 @@ A flex item itself can be made into a flex container as well.
 * `align-self` - align an item in a container
 
 ## Item in an Container
-* `justify-self` and `align-self` - justify/align an item in a container
+* `align-self` - justify/align an item in a container
+    * It's applied to just a specific child of a flex container
+    * `align-items` is just `align-self` except it's automatically applied to every child item
 
 
 ## Gap
 * To add gaps between items, in `.container` add `gap: 8px`
+    * It creates space in-between each Flex child
 
-* Adding `justify-content` to the container aligns items across the **main axis**
-* Adding `align-items` to the container aligns items across the **cross axis**
+## Margin
+* Add space aroun a specific child element
+* Default is `0`
+* Margin will gobble up the extra space if set to `1`
+
+## Wrapping
+* Setting `flex-wrap: wrap` on the container, items won't shrink below their hypothetical size
