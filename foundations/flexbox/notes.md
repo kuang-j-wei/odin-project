@@ -33,6 +33,8 @@ A flex item itself can be made into a flex container as well.
 * `flex-basis`:`0%`. Single number. It sets the initial size of a flex item.
   * It sets the hypothetical size of the primary axis
   * It also sets the minimum size, since item can't be below this threshold
+  * The default is `auto`, which sets the size based on flex items' content
+  * If it's set to `0`, then the initial size of the flex items is 0 and it gets changed based on `flex-grow` and `flex-shrink`
 * Note that often many types of content has a predefined minimum width
   * For example for texts it's 170px-200px
   * We can set the `min-width: 0px` so that the child content can `flex-shrink` according to the parent container 
