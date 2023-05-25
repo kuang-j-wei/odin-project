@@ -137,3 +137,15 @@ A flex item itself can be made into a flex container as well.
 
 ## Wrapping
 * Setting `flex-wrap: wrap` on the container, items won't shrink below their hypothetical size
+
+## Image Container
+### Explanation
+* `object-fit` - When putting an `img` or `video` in a container, add this declaration on the `img` type to get the following behaviors
+  * `fill` - default. Resized to fill the container. Will use container's dimensions. Image might be squished or stretched
+  * `contain` - Image keeps its aspect ratio, but resized to fit within the given dimension
+  * `cover` - Image keeps its aspect ratio but will clip to fit if exceeds the container
+  * `none` - Image not resized
+  * `scale-down` - Scaled down to the smallest version of `none` or `contain`
+### Tutorials
+* [Flexbox to design image gallery](https://www.w3schools.com/css/css3_object-fit.asp)
+* [object-fit property](https://www.w3schools.com/css/css3_object-fit.asp)
