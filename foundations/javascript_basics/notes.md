@@ -50,7 +50,7 @@ let color = COLOR_BLUE;
 alert(color);  // #00F
 ```
 
-## Tasks
+### Variables Tasks
 1. Working with variables
 ```
 let admin;
@@ -72,3 +72,30 @@ let currentVisitor = "John";
 3. Uppercase const
 * It's indifferent whether we use upper case for birthday. It's a value that's known beforehand and thus could be hard coded.
 * But it's not right to use upper case for age since it's not a hardcoded value
+
+## Numbers
+* JavaScript only has one type of number - 64-bit floating point
+  * Integers are accurate up to 15 digits
+  * Floats are accurate up to 17th decimals
+* If we add number and a string with the operand `+`, the result will be a string concatenation
+  * Numbers will be calculated according to the arithmetic rule
+* But for other operands like `/`, JavaScript will try to convert strings into numbers then perform the operation
+* But trying to do things like `let x = 100 / "Apple"` will result in `NaN`
+  * The global function `isNaN()` can check whether a variable is `NaN`
+* `NaN` can also be concatenated, i.e. `NaN + "5"` gives you `"NaN5"`
+* `Infinity` is a reserved name that represents a number outside the largest possible number
+  * It's of type `number`
+* Anything preceded by `0x` is interpreted as hexadecimal numeric constant
+* We can convert number representations with `toString()` like so
+```
+let myNumber = 32;
+myNumber.toString(32); // w
+myNumber.toString(16); // 10
+myNumber.toString(12); // 28
+myNumber.toString(10); // 32
+myNumber.toString(8); // 40
+myNumber.toString(2); // 100000
+```
+* Numbers are typically primitive values like `let x = 123;`, but we can also defind them as objects with the keyword `new`, `let y = new Number(123)`
+  * Then `x == y` but `x === y` is not true
+  * Two objects always return `false` when using the `===` operand
