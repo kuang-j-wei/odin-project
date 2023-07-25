@@ -25,6 +25,11 @@ message = 'World';
 let message = 'Hello';
 let message = 'World';
 ```
+### Declare without `let` or `var`
+* We can assign a value without using the `let` or `var` operands
+* We must assign a value immediately, i.e. `x = 4`
+* But the variable then becomes a global variable - even if initially declared inside a function it will be globally visible
+
 ### Naming Convention
 * Variables are case sensitive
 * Camel case is preferred
@@ -74,7 +79,7 @@ let currentVisitor = "John";
 * But it's not right to use upper case for age since it's not a hardcoded value
 
 ## Numbers
-* JavaScript only has one type of number - 64-bit floating point
+* JavaScript only has one type of `Number` - 64-bit floating point
   * Integers are accurate up to 15 digits
   * Floats are accurate up to 17th decimals
 * If we add number and a string with the operand `+`, the result will be a string concatenation
@@ -99,3 +104,23 @@ myNumber.toString(2); // 100000
 * Numbers are typically primitive values like `let x = 123;`, but we can also defind them as objects with the keyword `new`, `let y = new Number(123)`
   * Then `x == y` but `x === y` is not true
   * Two objects always return `false` when using the `===` operand
+
+### Useful Number Methods
+* We can round `Number` instances with the method `toFixed()`
+
+### Converting to number data types
+* `Number(String)` to turn a string into a `number`
+
+### Increment and decrement operators
+* When we do `variable++`, the interpreter returns the current value, _then_ increments the variable
+* If you instead like to increment, then return we do `++variable`
+
+### Comparison operators
+* `===` - strict equality
+  * Test whether the left and right values are identical
+  * If the two objects are not the same object, it will return `false`
+  * `5 === 3+2` will return `true`
+  * `let z = 5, z1 = 3+2`, and `z === z1` will be true because primitive number values are assigned. They are not considered new objects
+* `!==` - strict non-equality
+
+### Operators
