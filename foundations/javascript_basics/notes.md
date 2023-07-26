@@ -88,6 +88,7 @@ let currentVisitor = "John";
 * But trying to do things like `let x = 100 / "Apple"` will result in `NaN`
   * The global function `isNaN()` can check whether a variable is `NaN`
 * `NaN` can also be concatenated, i.e. `NaN + "5"` gives you `"NaN5"`
+    * But `NaN - 0` gives you `0`
 * `Infinity` is a reserved name that represents a number outside the largest possible number
   * It's of type `number`
 * Anything preceded by `0x` is interpreted as hexadecimal numeric constant
@@ -110,6 +111,8 @@ myNumber.toString(2); // 100000
 
 ### Converting to number data types
 * `Number(String)` to turn a string into a `number`
+* `null` gets converted to 0
+* `undefined` gets converted to `NaN`
 
 ### Increment and decrement operators
 * When we do `variable++`, the interpreter returns the current value, _then_ increments the variable
@@ -123,4 +126,31 @@ myNumber.toString(2); // 100000
   * `let z = 5, z1 = 3+2`, and `z === z1` will be true because primitive number values are assigned. They are not considered new objects
 * `!==` - strict non-equality
 
-### Operators
+## Operators
+### Numeric conversion
+* `+` as an unary operator can turn variables into `number`. i.e. `+""` becomes 0 and `+true` becomes 1
+### Operator precedence
+* Unary operators take precedence over binary operators
+* Here is the full [prescedence table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+### Assignment operator `=`
+* All operators in JS **returns** a value, and `=` does too
+* This allows for chaining assignment `let x = y = c = 2+2`, as each `=` returns a value
+* Note that the modify inplace operators like `*=` has the same precedence as assignment, so it gets run last
+### Comma operator `,`
+* All expressions before `,` are evaluated but only the last one is returned
+* `,` has the lowest precedence lower than `=` so `()` is very important to make sure the right thing gets done
+
+* "10"
+* ~"-10"~ -1
+* ~"truefalse"~ 1
+* 2
+* 6
+* "9px"
+7. "$45"
+8. 2
+9. ~"4px-2"~ NaN
+10. " -9 5"
+11. ~" -0 -5"~ -14
+12. ~null~ 1
+13. ~undefined~ NaN
+14. ~" \t \n -2"~ -2
