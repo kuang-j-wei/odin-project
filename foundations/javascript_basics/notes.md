@@ -140,17 +140,3 @@ myNumber.toString(2); // 100000
 * All expressions before `,` are evaluated but only the last one is returned
 * `,` has the lowest precedence lower than `=` so `()` is very important to make sure the right thing gets done
 
-* "10"
-* ~"-10"~ -1
-* ~"truefalse"~ 1
-* 2
-* 6
-* "9px"
-7. "$45"
-8. 2
-9. ~"4px-2"~ NaN
-10. " -9 5"
-11. ~" -0 -5"~ -14
-12. ~null~ 1
-13. ~undefined~ NaN
-14. ~" \t \n -2"~ -2
