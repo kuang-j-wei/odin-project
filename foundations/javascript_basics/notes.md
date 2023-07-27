@@ -140,3 +140,45 @@ myNumber.toString(2); // 100000
 * All expressions before `,` are evaluated but only the last one is returned
 * `,` has the lowest precedence lower than `=` so `()` is very important to make sure the right thing gets done
 
+## Knowledge Check
+> Name the three ways to declare a variable
+1. `let`
+2. `var`
+3. `const`
+
+> Which of the three variable declarations should you avoid and why?
+* `var` sometimes doesn't give expected results
+
+> What rules should you follow when naming variables?
+* First character must not be a digit
+* Name must contain only letters, digits, or the symbols `$` and `_`
+* Not one of the reserved names like `let`
+* Sensible
+* Meaningful
+* Use camel case
+
+> What happens when you add numbers and strings together?
+* It's executed as concatenation
+> How does the Modulo (%), or Remainder, operator work?
+* It divides the former with latter, then returns the remainder
+> Explain the difference between == and ===.
+* `==` only compares values, and will do type coercion
+* `===` is a strict equal. It will not correct types
+* In general in JS, comparing two objects will always return false
+> When would you receive a NaN result?
+* Doing arithmetic with non-numeric strings
+
+> How do you increment and decrement a number?
+* `++` and `--` operators
+> Explain the difference between prefixing and postfixing increment/decrement operators.
+* prefixing: returns the value _before_ the increment. i.e. `let a = 1; ++a returns 2 (but a is now 2)`
+* postfixing: returns the value _after_ the increment i.e. `let a = 1; a++ returns 2 (and a is now 2)`
+> What is operator precedence and how is it handled in JS?
+* It determines which operation gets run first
+* It's determined by predefined rules
+> How do you access developer tools and the console?
+* `Right click` -> `Inspect` -> `Console`
+> How do you log information to the console?
+* `console.log()`
+> What does unary plus operator do to string representations of integers? eg. +”10”
+* It turns them into `number` type i.e. this gets turned into `10`
