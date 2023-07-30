@@ -182,3 +182,54 @@ myNumber.toString(2); // 100000
 * `console.log()`
 > What does unary plus operator do to string representations of integers? eg. +”10”
 * It turns them into `number` type i.e. this gets turned into `10`
+
+# Fundamentals Part 2
+## Eight Basic Data Types
+We can put _any_ type into a variable and the type can change.
+
+For a language like this, it's called "dynamically typed". Meaning there exists data types, but variables are not bound to any of them.
+
+In JS, we can use the `typeof` operators to determine a variable's type `typeof "foo" // "string"`
+1. `number`
+* Both integer and floating point
+* Include `Infinity` and `NaN`
+    * `NaN` persists, mathematical operations on `NaN` returns `NaN`
+    * One exception is `NaN ** 0 = 1`
+
+2. `BigInt`
+* For number greater than `2^53 - 1`or less than `-(2^53 - 1)`
+* `BigInt` can handle integers of any arbitrary length
+* Created by appending `n` to the end of an integer
+
+3. `String`
+* Can be surrounded by `""`, `''`, or `\``\` (backticks)
+    * Backticks are like f-strings, by using `${...}`
+    * We can do
+    ```
+    let name = "John";
+    alert(`Hello, ${name}!`); // Hello, John!
+    ```
+* Backticks can span multiple lines
+* We can escape characters in a string with `\`
+4. `Boolean`
+* `true` and `false`
+
+5. `null`
+* Its own type
+* Represents "nothing", "empty", "value unknown"
+
+6. `undefined`
+* Its own type
+* Represents "value not assigned"
+* If declared, but not assigned, then a variable is `undefined`
+```
+let age;
+alert(age); // shows undefined
+```
+
+7. `object`
+* All other types are "primitive", because their values can only contain a single thing
+* `object`s store collections of data and complex entities
+
+8. `symbol`
+* Used to create unique identifiers for objects
