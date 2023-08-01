@@ -239,7 +239,7 @@ alert(age); // shows undefined
 * When doing string and number comparisons, JS always conver the strings to numbers
 * `===` will do a strict comparison without type conversion
 * `null == undefined` returns `true`; `null === undefined` returns `false`
-  * For other comparison operators though, `null` becomes `0` and `undefined` becomes `NaN`
+  * For other comparison operators though (`>, <, >=, <=`), `null` becomes `0` and `undefined` becomes `NaN`
   * Generally, don't do comparison with `null/undefined`
 ### Logical Operators
 1. `||` (`OR`)
