@@ -233,3 +233,21 @@ alert(age); // shows undefined
 
 8. `symbol`
 * Used to create unique identifiers for objects
+
+## Conditionals
+### Comparison
+* When doing string and number comparisons, JS always conver the strings to numbers
+* `===` will do a strict comparison without type conversion
+* `null == undefined` returns `true`; `null === undefined` returns `false`
+  * For other comparison operators though, `null` becomes `0` and `undefined` becomes `NaN`
+  * Generally, don't do comparison with `null/undefined`
+### Logical Operators
+1. `||` (`OR`)
+  * Executes from left to right, returns the first truthy value
+  * It can be use to short-circuit and print/execute the first non-false statement, or the last value
+2. `&&` (`AND`)
+  * It executes from left to right, so will return the first falsy value, or the last value
+  * `&&` has a higher precedence than `||`
+3. `!` (`NOT`)
+  * We can use `!!` to turn a value into boolean type
+  * Highest precedence of all logical operators
