@@ -233,3 +233,43 @@ alert(age); // shows undefined
 
 8. `symbol`
 * Used to create unique identifiers for objects
+
+
+## Conditionals
+* `switch` can be used to replace multiple `if else`
+    * `expression` inside `switch` can be an expression or a value (variable)
+    * `choice` after `case` is what the expression or variable/value could be
+```
+switch (expression) {
+  case choice1:
+    // run this code
+    break;
+
+  case choice2:
+    // run this code instead
+    break;
+
+  // include as many cases as you like
+
+  default:
+    // actually, just run this code
+    break;
+}
+```
+    * For example, it would've been
+    ```
+    if (choice == 'sunny') {
+        message = 'have a nice day!'
+    }
+    else if (choice = 'rainy') {
+        message = 'bring an umbrella!'
+    }
+    ```
+    ```
+    switch (sunny) {
+        case 'sunny':
+            message = 'have a nice day!'
+        case 'rainy':
+            message = 'bring an umbrella!'
+    }
+    ```
