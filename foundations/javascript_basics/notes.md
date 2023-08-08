@@ -304,3 +304,23 @@ switch (expression) {
   ```
 * `?` is an operator, with three operands, hence the name ternary operator
 * The operator's purpose is to return one value or another depending on its condition
+
+## Knowledge Check
+> What are the eight data types in JavaScript
+1. Number
+2. Bigint
+3. String
+4. Boolean
+5. null
+6. undefined
+7. symbol
+8. object
+
+> Which data type is NOT primitive?
+* Object
+
+> What is the relationship between null and undefined?
+* `null == undefined` returns true
+* Null stands for "nothing", "empty", or "value unknown"
+* Undefined stands for "value not assigned"
+* They are both its own type
