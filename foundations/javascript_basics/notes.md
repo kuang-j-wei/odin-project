@@ -289,3 +289,18 @@ switch (expression) {
             message = 'bring an umbrella!'
     }
     ```
+* We can group cases by just adding
+```
+  case condition1:
+  case condition2:
+    sameOutcome;
+    break;
+```
+### Ternary operator
+* A simpler way to write `if ... else ...` statements
+* The syntax is
+  ```
+  condition ? run this code : run this code instead
+  ```
+* `?` is an operator, with three operands, hence the name ternary operator
+* The operator's purpose is to return one value or another depending on its condition
