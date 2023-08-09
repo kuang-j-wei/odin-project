@@ -324,3 +324,92 @@ switch (expression) {
 * Null stands for "nothing", "empty", or "value unknown"
 * Undefined stands for "value not assigned"
 * They are both its own type
+
+> What is the difference between single, double, and backtick quotes for strings?
+* Single and double have no difference
+* Backtick can be used to do inline variable strings like \`${variable}`
+
+> What is the term for joining strings together?
+* Concatenation
+
+> Which type of quote lets you embed variables/expressions in a string?
+* Backtick
+
+> How do you embed variables/expressions in a string?
+* \`${variable}`
+
+> How do you use escape characters in a string?
+* `\`
+
+> What is the difference between the slice/substring/substr string methods?
+* `slice(start, end)` - end is not inclusive. If the parameter is negative, hte position is counted from the end of the string
+* `substring(start, end)` - start and end values less than 0 are treated as 0
+* `substr(start, length)` - second parameter is length
+
+> What are the three logical operators, and what do they stand for?
+* `||`, or
+* `&&`, and
+* `!`, not
+
+> What are the comparison operators?
+* `>`
+* `<`
+* `>=`
+* `<=`
+* equals `==`
+* not equal `!=`
+* Note that `null` and `undefined` are `null == undefined` and that's the only case that they are equal to each other
+* `null` is not `==` to `0`, but when doing `>=` comparison, `null` gets translated to `0`
+  * When doing comparison (not equality check), `undefined` gets turned into `NaN`
+
+> What are truthy and falsy values?
+* Falsy - zero, `""` (empty strings), `null`, `undefined`, `NaN`
+* truthy - non zero numbers, everything else
+
+> What are the falsy values in JavaScript?
+* Falsy - zero, `""` (empty strings), `null`, `undefined`, `NaN`
+
+> What are conditionals?
+* Statements used to perform different actions based on different conditions
+
+> What is the syntax for an if/else conditional?
+```
+if (condition) {
+  // do stuff
+} else {
+  // do stuff
+}
+```
+
+> What is the syntax for a switch statement?
+```
+switch (expression) {
+  case choice1:
+    break;
+  
+  case choice2:
+    break;
+
+  default: // optional
+    break;
+}
+```
+
+
+> What is the syntax for a ternary operator?
+```condition ? do_true_stuff : everything_else```
+
+> What is nesting?
+```
+if (condition1) {
+  if (condition2) {
+    \\ do stuff
+  }
+  else {
+    \\ do stuff
+  }
+}
+else {
+  \\ do stuff
+}
+```
