@@ -413,3 +413,25 @@ else {
   \\ do stuff
 }
 ```
+
+# JavaScript Developer Tools
+## Knowledge Check
+> How do you open developer tools?
+1. Right click on an element then click `inspect'
+2. `Chrome Menu` -> `More Tools` -> `Developer Tools`
+3. `Ctrl` + `Shift` + `C`
+
+> How do you change screen size of a website using developer tools?
+Open developer tools, then `Ctrl` + `Shift` + `M`, or click the "Toggle device toolbar" button
+
+> What is a breakpoint?
+It lets you pause your code in the middle of its execution, and examine all values at that moment in time.
+
+It's better than the print method because
+* Don't have to modify the source code to add print statements
+* Don't have to specify which variable to inspect one by one - all variables' values at that moment are shown
+
+> How do you set a breakpoint
+* Go to developer tools -> `Sources` -> open the javascript file -> click on a line
+* Or use the various event listeners
+* Or conditional breakpoints, etc
