@@ -435,3 +435,53 @@ It's better than the print method because
 * Go to developer tools -> `Sources` -> open the javascript file -> click on a line
 * Or use the various event listeners
 * Or conditional breakpoints, etc
+
+# Fundamentals Part 3
+* Function Scope
+  * When a function is defined, variables inside the function are inside their own separate scope
+  * The top level outside all functions is called the global scope, they are accessible from everywhere in the code
+  * Values passed to a function as parameters are _copied_ to its local variables
+  * Note because they are passed by _value_ only, even if a function changes an argument's value, it does not change the parameter's original value
+
+* Return values
+  * The form is
+  ```
+  function functionName(parameter) {
+    return ...
+  }
+  ```
+* Default values
+  * In JavaScript, if an argument is missing, it will simply be `undefined`
+  * But we can also set a default in the function declaration
+  ```
+  function showMessage(form, tex = "no text given") {
+    alert( from + ": " + text );
+  }
+
+  showMessage("Ann) // Ann: no text given
+  ```
+  * Another quirk is that if you pass `undefined`, to a parameter with default value, then the default value will still be taken on 
+  * Default value can also be another function itself
+
+* Returning a value
+  * You can `return` without anything specified, which will just give you `undefined`
+
+* Naming a function
+  * Start with verbal prefix
+
+* One function one job
+  * Easier to debug
+  * Function itself becomes a self-explanatory comment
+
+
+
+
+## Knowledge Check
+> What are functions useful for
+* We don't have to repeat code. Makes code modular and reusable.
+
+> How do you invoke a function?
+* Simply `functionName()`
+
+> What are anonymous functions?
+* 
