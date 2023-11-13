@@ -473,8 +473,16 @@ It's better than the print method because
   * Easier to debug
   * Function itself becomes a self-explanatory comment
 
+* Function Expression vs Function Declaration
+  * Function expressions are only created when it's called, therefore has to be defined before its execution in the script
+  * Function expression can be accessed outside of a code block, by declaring a variable outside of the block and assign a function to that variable
+  * A conditional declaration is usually a better job for Function Expression
+  * Otherwise, Function Declaration should be the default way to define functions (functions are created at initiation)
+  * Functions are values, they can be assigned, copied, or declared in any place of the code
 
-
+* Arrow functions are simple one-liners
+  * Simply define `let sum = (a, b) => a + b;`
+  * You can even create anonymous functions like `() => alert('Hello!)`, as a function that simply alerts 'Hello!'
 
 ## Knowledge Check
 > What are functions useful for
@@ -484,4 +492,16 @@ It's better than the print method because
 * Simply `functionName()`
 
 > What are anonymous functions?
-* 
+* A function that has no name
+* Usually used when a function is being passed as an argument, and therefore is good convenient to just define the function in place with no name instead of creating a separate function
+
+> What is function scope?
+* It defines what variables the function has access to
+* For example, variables defined in a function can only be accessed in that function
+
+> What are return values?
+* They are values that a function returns
+
+> What are arrow functions?
+* One liner definitions by just writing `(...args) => expression;`
+  * `args` can be empty to so we just have `() => expression;`
